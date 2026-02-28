@@ -137,10 +137,11 @@ pip install ansible ansible-runner
 ```
 
 ### ディレクトリ構成
+```bash
 .  
 ├── sample.py   : 実行スクリプト  
-└── sample.yaml : play-bookファイル
-
+└── sample.yaml : playbookファイル
+```
 ### pythonコード
 
 
@@ -149,7 +150,7 @@ pip install ansible ansible-runner
 import ansible_runner
 
 r = ansible_runner.run(
-    private_data_dir='/aaa/bbb', # sample.pyを置いたディレクトリ
+    private_data_dir='/aaa/bbb', # sample.pyを置いたカレントディレクトリ
     playbook='sample.yaml',
     inventory={
         "dev-servers": {
